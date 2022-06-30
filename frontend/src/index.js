@@ -2,6 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './utils/reportWebVitals';
+import 'antd/dist/antd.min.css';
+import './assets/style/reset.scss';
+import './assets/style/global.scss';
+import Log4js from './utils/log4js';
+
+
+window.$log4js = new Log4js();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
