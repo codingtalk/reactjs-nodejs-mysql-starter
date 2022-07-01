@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-import { configApp } from '@/config/app';
-
 axios.defaults.timeout = 1000 * 60 * 5;
 
 class HttpUtil {
@@ -26,9 +24,6 @@ class HttpUtil {
 
     interceptors(instance, url) {
         instance.interceptors.request.use(config => {
-            if (sessionLib.get()) {
-                config.headers[configApp.tokenKey] = sessionLib.get();
-            }
             this.queue[url] = true;
             return config;
         }, error => {

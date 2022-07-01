@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.16.0",
+    "@icon-park/react": "^1.4.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.16.4",
@@ -33,6 +34,7 @@
     "jest": "^27.4.3",
     "jest-resolve": "^27.4.2",
     "jest-watch-typeahead": "^1.0.0",
+    "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.4.5",
     "node-sass": "^7.0.1",
     "postcss": "^8.4.4",

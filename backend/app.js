@@ -8,9 +8,9 @@ const logger = require('koa-logger')
 var cors = require('koa-cors');
 let log4js = require('log4js')
 
-const index = require('./routes/index')
-const axq = require('./routes/axq')
-const sys = require('./routes/sys')
+const routeIndex = require('./routes/index')
+const routePage = require('./routes/page')
+const routePlan = require('./routes/plan')
 
 log4js.configure({
   appenders: {
@@ -58,9 +58,9 @@ app.use(async (ctx, next) => {
 app.use(cors())
 
 // routes
-app.use(index.routes(), index.allowedMethods())
-app.use(axq.routes(), axq.allowedMethods())
-app.use(sys.routes(), sys.allowedMethods())
+app.use(routeIndex.routes(), routeIndex.allowedMethods());
+app.use(routePage.routes(), routePage.allowedMethods());
+app.use(routePlan.routes(), routePlan.allowedMethods());
 
 // error-handling
 app.on('error', (err, ctx) => {

@@ -1,0 +1,18 @@
+{
+  "api": {
+    "url": {
+      "dev": "//127.0.0.1:8200/",
+      "lcoal": "//127.0.0.1:8200/",
+      "test": "",
+      "prod": ""
+    },
+    "domain": {
+      "page": {
+        "info": {
+          "method": "POST",
+          "url": "page/info"
+        }
+      }
+    }
+  }
+}

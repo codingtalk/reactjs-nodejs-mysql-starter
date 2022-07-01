@@ -1,6 +1,5 @@
 import Request from './request';
-import entitySet from './entity';
-import Vue from 'vue';
+import entitySet from '../entity';
 const _ = require('lodash');
 
 const _baseTableField = {
@@ -70,7 +69,7 @@ class Entity {
                 if (typeof config.errorTip === 'function') {
                     config.errorTip(res);
                 } else {
-                    Vue.prototype.$message.error(config.errorTip);
+                    
                 }
             }
             if (config.parse4Entity) {

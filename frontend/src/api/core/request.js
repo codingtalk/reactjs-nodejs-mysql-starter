@@ -1,5 +1,5 @@
-import configUrl from '../config/url';
-import httpUtil from '../utils/httpUtil';
+import configUrl from '../../config/url';
+import httpUtil from '../../utils/httpUtil';
 
 export default class Request {
 
@@ -34,7 +34,7 @@ export default class Request {
             url = configUrl[app].domain[domain][method].url;
         } catch (e) {
             $log4js.error(`
-      Request.js =====> api json configure is error
+      request.js =====> api json configure is error
       full path ======> ${app}/${domain}/${method}
       `);
         }

@@ -5,7 +5,7 @@ import './index.scss';
 export default function index() {
     return (
         <div className='view index'>
-            <Link to="/choose">
+            <Link to="/plan/choose">
                 <h1>Click here, Go to choose plan!</h1>
             </Link>
         </div>
