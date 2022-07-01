@@ -1,0 +1,22 @@
+version: "3"
+services:
+  nodejs:
+    restart: always
+    image: ${PROJECT_NAME}/nodejs
+    build: ${IMAGES_ROOT}/nodejs
+    container_name: ${PROJECT_NAME}_nodejs
+    ports:
+      - ${PORT_NODEJS}:8200
+  msyql: ${PROJECT_NAME}/mysql
+    build: ${IMAGES_ROOT}/mysql
+    container_name: ${PROJECT_NAME}_mysql
+    ports:
+      - ${PORT_MYSQL}:3306
+    volumes:
+      - ${IMAGES_ROOT}/mysql/data:/var/lib/mysql/:rw
+      - ${IMAGES_ROOT}/mysql/my.cnf:/etc/mysql/mysql.conf.d/my.cnf:rw
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MASTER_ROOT_PASSWORD}
+      MYSQL_USER: ${MASTER_USER}
+      MYSQL_PASSWORD: ${MASTER_PASSWORD}
+      MYSQL_DATABASE: ${MASTER_DATABASE}
