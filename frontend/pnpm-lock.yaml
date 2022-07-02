@@ -47,8 +47,10 @@ specifiers:
   react-dom: ^18.2.0
   react-refresh: ^0.11.0
   react-router-dom: ^6.3.0
+  react-transition-group: ^4.4.2
   resolve: ^1.20.0
   resolve-url-loader: ^4.0.0
+  resso: ^0.6.0
   sass-loader: ^13.0.2
   semver: ^7.3.5
   source-map-loader: ^3.0.0
@@ -108,8 +110,10 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-refresh: 0.11.0
   react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
+  react-transition-group: 4.4.2_biqbaboplfbrettd7655fr4n2y
   resolve: 1.22.1
   resolve-url-loader: 4.0.0
+  resso: 0.6.0_react@18.2.0
   sass-loader: 13.0.2_porsekh6uhha3tywrdx65ogcxa
   semver: 7.3.7
   source-map-loader: 3.0.1_webpack@5.73.0
@@ -4509,6 +4513,13 @@ packages:
     resolution: {integrity: sha512-gd3ypIPfOMr9h5jIKq8E3sHOTCjeirnl0WK5ZdS1AW0Odt0b1PaWaHdJ4Qk4klv+YB9aJBS7mESXjFoDQPu6DA==}
     dependencies:
       utila: 0.4.0
+    dev: false
+
+  /dom-helpers/5.2.1:
+    resolution: {integrity: sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==}
+    dependencies:
+      '@babel/runtime': 7.18.6
+      csstype: 3.1.0
     dev: false
 
   /dom-serializer/0.2.2:
@@ -9481,6 +9492,20 @@ packages:
       react: 18.2.0
     dev: false
 
+  /react-transition-group/4.4.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-/RNYfRAMlZwDSr6z4zNKV6xu53/e2BuaBbGhbyYIXTrmgu/bGHzmqOs7mJSJBHy9Ud+ApHx3QjrkKSp1pxvlFg==}
+    peerDependencies:
+      react: '>=16.6.0'
+      react-dom: '>=16.6.0'
+    dependencies:
+      '@babel/runtime': 7.18.6
+      dom-helpers: 5.2.1
+      loose-envify: 1.4.0
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /react/18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
@@ -9735,6 +9760,15 @@ packages:
       is-core-module: 2.9.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
+    dev: false
+
+  /resso/0.6.0_react@18.2.0:
+    resolution: {integrity: sha512-iOCgHrSCZ9pNelnkPXU8ODc2ddfz5/5D4GmgmTe3vnkL8762UQ9248mjCz99vzTK5GNjXLt0OF4rp4obws6VYQ==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+      use-sync-external-store: 1.2.0_react@18.2.0
     dev: false
 
   /retry/0.12.0:
@@ -10863,6 +10897,14 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
       punycode: 2.1.1
+    dev: false
+
+  /use-sync-external-store/1.2.0_react@18.2.0:
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /util-deprecate/1.0.2:

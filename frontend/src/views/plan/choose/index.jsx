@@ -142,14 +142,14 @@ export default function choose() {
                 </div>
                 <div className="box_footer">
                     <div className="footer_submit">
-                        <Button type="primary" block={isMobile} disabled={!planTypeId} loading={isSubmitting} onClick={() => { createPlan() }}>创建方案</Button>
+                        <Button type="primary" block={isMobile} disabled={!planTypeId} loading={isSubmitting} onClick={() => { createPlan() }}>Create Plan</Button>
                     </div>
                 </div>
             </div>
             {
                 !isMobile ? <div className="choose_link">
                     <div className="link_item">
-                        <em>More fun here（码上talk|RC）》》》》》》》 </em>
+                        <em>More fun here（Codingtalk|RC）》》》》》》》 </em>
                         <Branch theme="outline" size="20" fill="#d92b2f" strokeLinecap="butt" />
                         <a href="https://gitee.com/running-cat" target="_blank">Gitee</a>
                     </div>
