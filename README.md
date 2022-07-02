@@ -65,9 +65,7 @@ If you have fellow the step of backend, nothing you need to do
 
 Api doc online is available now, you can do interface-testing without anything installed
 
-```
-LINK: https://www.apifox.cn/apidoc/shared-7b8cb711-2ba6-45e8-a44d-bf3cfb4ecd65  PASSWORD : YunLuEZ5 
-```
+- [Apifox link](https://www.apifox.cn/apidoc/shared-7b8cb711-2ba6-45e8-a44d-bf3cfb4ecd65)  password : YunLuEZ5 
 
 
 # Demo online
