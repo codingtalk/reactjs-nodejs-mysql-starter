@@ -7,7 +7,7 @@ services:
     container_name: ${PROJECT_NAME}_nodejs
     ports:
       - ${PORT_NODEJS}:8200
-  mysql: ${PROJECT_NAME}/mysql
+  mysql:
     build: ${IMAGES_ROOT}/mysql
     container_name: ${PROJECT_NAME}_mysql
     ports:
