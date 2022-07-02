@@ -13,9 +13,14 @@ React.js Nodejs Mysql starter is a tiny fullstack dev-cli (react.js+nodejs+mysql
 ~~~
 starter         Project root dir
 ├─── _deploy    Docker config and one-step start-up script
+├─── _sql       Sql file
 ├─── backend    Http framework integrated by nodejs
 ├─── frontend   React.js app
 ~~~
+
+# Deploy framework
+
+![alt](http://demo.codingtalk.cn/deploy-framework.png)
 
 # Quick start
 
