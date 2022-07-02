@@ -20,7 +20,7 @@ starter         Project root dir
 
 # Deploy framework
 
-![alt](http://demo.codingtalk.cn/deploy-framework.png)
+![alt](https://gitee.com/running-cat/reactjs-nodejs-mysql-starter/raw/master/frontend/public/deploy-framework.png)
 
 # Quick start
 
