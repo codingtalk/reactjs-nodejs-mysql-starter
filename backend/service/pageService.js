@@ -4,29 +4,28 @@ const exceptionUtil = require("../utils/exceptionUtil");
 const planType = require("../db/entity/planType");
 const planChecklist = require("../db/entity/planChecklist");
 
-const KEY_LIMIT_TYPE = ["planChoose", "index"];
-
-const _planChoose = async () => {
-  const responseVo = new ResponseVo();
-  const dataJson = {
-    planTypeList: [],
-    palnChecklist: [],
-  };
-  dataJson.planTypeList = await planType.findAll();
-  dataJson.palnChecklist = await planChecklist.findAll();
-  responseVo.ok(dataJson);
-  return responseVo;
-};
-
 const pageService = {
-  info: (ctx) => {
+  info: async (ctx) => {
+    const responseVo = new ResponseVo();
+    const keyLimitType = ["planChoose", "index"];
+    let dataJson = {
+    }
     const key = requestUtil.getQueryValue(ctx, "key");
-    if (!KEY_LIMIT_TYPE.includes(key)) {
+    if (!keyLimitType.includes(key)) {
       exceptionUtil.throwBizError(`非法key: ${key}`);
     }
-    if (key === "planChoose") {
-      return _planChoose();
+    switch (key) {
+      case "planChoose":
+        dataJson = {
+          planTypeList: await planType.findAll(),
+          planChecklist: await planChecklist.findAll()
+        }
+        break;
+      default:
+        break;
     }
+    responseVo.ok(dataJson);
+    return responseVo;
   },
 };
 

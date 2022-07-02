@@ -1,5 +1,6 @@
 import configUrl from '../../config/url';
 import httpUtil from '../../utils/httpUtil';
+import { sysStore } from '../../store';
 
 export default class Request {
 
@@ -33,12 +34,14 @@ export default class Request {
         try {
             url = configUrl[app].domain[domain][method].url;
         } catch (e) {
+            // eslint-disable-next-line no-undef
             $log4js.error(`
       request.js =====> api json configure is error
       full path ======> ${app}/${domain}/${method}
       `);
         }
         if (config.showLoading) {
+            sysStore.isLoading = true;
         }
         return httpUtil.request({
             baseURL: this._getRequestBaseUrl(configUrl[app].url),
@@ -46,7 +49,7 @@ export default class Request {
             params,
             data
         }).finally(() => {
-
+            sysStore.isLoading = false;
         });
     }
 }

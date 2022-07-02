@@ -1,5 +1,7 @@
 @import './var.scss';
 
 .view {
+    position: relative;
+    min-height: 100vh;
     background: $background-color-base;
 }

@@ -1,14 +1,19 @@
 import { BrowserRouter } from 'react-router-dom';
+import { Spin } from 'antd';
 
-import RouterConfig from './router'
+import RouterConfig from './router';
+import { sysStore } from './store';
 
 function App() {
+  const { isLoading } = sysStore; 
   return (
-    <div className="App">
-      <BrowserRouter>
-        {<RouterConfig />}
-      </BrowserRouter>
-    </div>
+    <Spin tip="Loading..." spinning={isLoading}>
+      <div className="App">
+        <BrowserRouter>
+          {<RouterConfig />}
+        </BrowserRouter>
+      </div>
+    </Spin >
   );
 }
 

@@ -6,6 +6,7 @@ import 'antd/dist/antd.min.css';
 import './assets/style/reset.scss';
 import './assets/style/global.scss';
 import Log4js from './utils/log4js';
+import './utils/exceptionResolver';
 
 
 window.$log4js = new Log4js();

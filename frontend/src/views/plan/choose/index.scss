@@ -1,57 +1,58 @@
 @import "../../../assets/style/var.scss";
 
 .choose {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  &_box {
-    width: 900px;
-    box-sizing: border-box;
-    padding: 0 20px;
-    background: white;
-    border: $border-width-base $border-style-base $border-color-base;
+    &_box {
+        width: 900px;
+        box-sizing: border-box;
+        padding: 0 20px;
+        background: white;
+        border: $border-width-base $border-style-base $border-color-base;
 
-    .box_title {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100px;
-    }
-    .box_content{
-        table{
-            width: 100%;
-                        thead{
-                tr{
-                    th{
-                        height: 70px;
+        .box_title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        .box_content {
+            table {
+                width: 100%;
+
+                thead {
+                    tr {
+                        th {
+                            height: 70px;
+                        }
                     }
                 }
-            }
-            tbody{
-                tr{
-                    td{
-                        height: 50px;
-                    }
-                    &:not(:last-child){
-                        position: relative;
-                        &:after{
-                            position: absolute;
-                            bottom:0;
-                            left:0;
-                            width:100%;
-                            content: "";
-                            height: $border-width-base;
-                            background: $border-color-base;
+
+                tbody {
+                    tr {
+                        td {
+                            height: 50px;
+                        }
+
+                        &:not(:last-child) {
+                            position: relative;
+
+                            &:after {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                content: "";
+                                height: $border-width-base;
+                                background: $border-color-base;
+                            }
                         }
                     }
                 }
             }
         }
     }
-  }
 }
