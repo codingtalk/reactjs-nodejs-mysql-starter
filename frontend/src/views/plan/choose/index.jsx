@@ -4,7 +4,7 @@ import React, { useEffect, useState, Fragment } from 'react';
 import { CSSTransition } from 'react-transition-group'
 
 import { Button, Checkbox, message } from 'antd';
-import { Close, Check } from '@icon-park/react';
+import { Close, Check, Branch, Github, Ghost } from '@icon-park/react';
 import './index.scss';
 import api from '../../../api';
 import { sysStore } from '../../../store';
@@ -137,6 +137,23 @@ export default function choose() {
                     </div>
                 </div>
             </div>
+            {
+                !isMobile ? <div className="choose_link">
+                    <div className="link_item">
+                        <em>More fun here（码上talk|RC）》》》》》》》 </em>
+                        <Branch theme="outline" size="20" fill="#d92b2f" strokeLinecap="butt" />
+                        <a href="https://gitee.com/running-cat" target="_blank">Gitee</a>
+                    </div>
+                    <div className="link_item">
+                        <Ghost theme="outline" size="20" fill="#1890ff" strokeLinecap="butt" />
+                        <a href="https://www.codingtalk.cn/" target="_blank">About</a>
+                    </div>
+                    <div className="link_item">
+                        <Github theme="outline" size="20" fill="#333" strokeLinecap="butt" />
+                        <a href="https://github.com/codingtalk" target="_blank">Github</a>
+                    </div>
+                </div> : ''
+            }
         </div>
     )
 }
