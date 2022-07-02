@@ -21,11 +21,26 @@ starter         Project root dir
 
 We had provided a quick start-up guide for each module, that will make you start you project quickly, you have to clone the repository by the command ``git clone`` to your local machine
 
-## backend
+## Backend
 
 - Env Requirement
 
-First all, you must install ```nodejs+npm```, and ```mysql```
+First all, you must install [nodejs+npm](https://nodejs.org/en/), and [mysql](https://www.mysql.com/),
+If you want to run the project over [docker](https://www.docker.com/), you should make sure you had installed docker over linux subsystem in window10 or linux, run the command ```./sh/startup.sh```
+
+- Install docker(optional)
+
+Run the follow commands below over linux (Centos8 example)
+
+```
+1. yum install -y yum-utils device-mapper-persistent-data lvm2
+2. yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+3. yum install docker-ce
+4. systemctl enable docker
+5. curl -L https://github.com/docker/compose/releases/download/1.26.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+6. chmod +x /usr/local/bin/docker-compose
+7. docker-compose version
+```
 
 - Step
 
@@ -34,7 +49,7 @@ First all, you must install ```nodejs+npm```, and ```mysql```
 3. ```npm run start```
 4. Visit the link ```http://localhost:8200``` by your browser, you can see the text ```hello koa2``` generally
 
-## frontend
+## Frontend
 
 - Env Requirement
 
@@ -45,7 +60,6 @@ If you have fellow the step of backend, nothing you need to do
 1. Run the command ```npm install``` at the root path of the frontend
 2. ```npm run start```
 3. Visit the link ```http://localhost:3000```
-4. If you want to run the project over docker, you should make sure you had installed docker in linux subsystem in window10 or linux, run the command ```./sh/startup.sh```
 
 # Api Doc
 

@@ -7,7 +7,7 @@ services:
     container_name: ${PROJECT_NAME}_nodejs
     ports:
       - ${PORT_NODEJS}:8200
-  msyql: ${PROJECT_NAME}/mysql
+  mysql: ${PROJECT_NAME}/mysql
     build: ${IMAGES_ROOT}/mysql
     container_name: ${PROJECT_NAME}_mysql
     ports:
@@ -17,6 +17,4 @@ services:
       - ${IMAGES_ROOT}/mysql/my.cnf:/etc/mysql/mysql.conf.d/my.cnf:rw
     environment:
       MYSQL_ROOT_PASSWORD: ${MASTER_ROOT_PASSWORD}
-      MYSQL_USER: ${MASTER_USER}
-      MYSQL_PASSWORD: ${MASTER_PASSWORD}
       MYSQL_DATABASE: ${MASTER_DATABASE}

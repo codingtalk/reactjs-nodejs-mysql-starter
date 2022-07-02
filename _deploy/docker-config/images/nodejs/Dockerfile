@@ -15,6 +15,6 @@ CMD  npm config set registry https://registry.npm.taobao.org \
 
 && npm install \
 
-&& npm run start \
+&& npm run start --env=prod \
 
 && echo "nodejs 启动完成"
