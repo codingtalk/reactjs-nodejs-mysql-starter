@@ -12,6 +12,12 @@
           "method": "POST",
           "url": "page/info"
         }
+      },
+      "plan": {
+        "add": {
+          "method": "POST",
+          "url": "plan/add"
+        }
       }
     }
   }

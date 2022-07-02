@@ -1,5 +1,7 @@
-export const PlanType = import("./plan/planType");
+import Plan from "./plan"
+import PlanType from "./plan/planType"
 
 export default {
+  Plan,
   PlanType,
 };

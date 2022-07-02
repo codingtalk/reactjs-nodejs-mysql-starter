@@ -7,8 +7,8 @@
 
     &_box {
         width: 900px;
-        box-sizing: border-box;
         padding: 0 20px;
+        box-sizing: border-box;
         background: white;
         border: $border-width-base $border-style-base $border-color-base;
 
@@ -17,6 +17,7 @@
             justify-content: center;
             align-items: center;
             height: 100px;
+            border-bottom: $border-width-base $border-style-base $border-color-base;
         }
 
         .box_content {
@@ -35,6 +36,27 @@
                     tr {
                         td {
                             height: 50px;
+
+                            .i-icon {
+                                display: none;
+                            }
+
+                            .check {
+                                &-enter {
+                                    display: inline-block;
+                                    transform: scale(0.2);
+                                }
+
+                                &-enter-active {
+                                    display: inline-block;
+                                    transform: scale(1);
+                                    transition: transform 1s ease-in;
+                                }
+
+                                &-enter-done {
+                                    display: inline-block;
+                                }
+                            }
                         }
 
                         &:not(:last-child) {
@@ -51,6 +73,41 @@
                             }
                         }
                     }
+                }
+            }
+        }
+
+        .box_footer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            height: 100px;
+            border-top: $border-width-base $border-style-base $border-color-base;
+        }
+
+    }
+
+    &--mobile {
+        display: block;
+
+        .choose_box {
+            width: 100%;
+            padding: 10px;
+            border: none;
+
+            .box_content {}
+
+            .box_footer{
+                border:none;
+                height: 0;
+                .footer_submit{
+                    position: fixed;
+                    bottom:0;
+                    left:0;
+                    width:100%;
+                    box-sizing: border-box;
+                    padding: 20px 10px;
+                    background: white;
                 }
             }
         }

@@ -1,7 +1,8 @@
 import Request from "./core/request";
 
-export * from "./entity";
+import entitySet from "./entity";
 
 export default {
   Request,
+  ...entitySet
 };

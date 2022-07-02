@@ -49,7 +49,9 @@ export default class Request {
             params,
             data
         }).finally(() => {
-            sysStore.isLoading = false;
+            setTimeout(() => {
+                sysStore.isLoading = false;
+            }, 300)
         });
     }
 }

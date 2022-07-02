@@ -1,10 +1,11 @@
 const router = require("koa-router")();
 
+const planService = require("../service/planService");
 
 router.post("/plan/add", async (ctx, next) => {
-  ctx.body = {
-    title: "koa2 json",
-  };
+  await planService.add(ctx).then((ret) => {
+    ctx.body = ret;
+  });
 });
 
 module.exports = router;

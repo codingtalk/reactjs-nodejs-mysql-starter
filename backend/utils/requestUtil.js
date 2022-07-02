@@ -8,6 +8,16 @@ const requestUtil = {
     }
     return v;
   },
+  getBodyValue: (ctx, k) => {
+    if (!k) {
+      return ctx.request.body;
+    }
+    const v = ctx.request.body[k];
+    if (!v) {
+      exceptionUtil.throwBizError(`body： ${k}不能为空`);
+    }
+    return v;
+  },
 };
 
 module.exports = requestUtil;
