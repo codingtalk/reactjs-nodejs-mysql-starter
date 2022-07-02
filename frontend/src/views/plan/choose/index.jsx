@@ -3,8 +3,8 @@
 import React, { useEffect, useState, Fragment } from 'react';
 import { CSSTransition } from 'react-transition-group'
 
-import { Button, Checkbox, message } from 'antd';
-import { Close, Check, Branch, Github, Ghost } from '@icon-park/react';
+import { Button, Checkbox, message, Modal } from 'antd';
+import { Close, Check, Branch, Github, Ghost, SmilingFace } from '@icon-park/react';
 import './index.scss';
 import api from '../../../api';
 import { sysStore } from '../../../store';
@@ -54,15 +54,24 @@ export default function choose() {
             message.error('Select plan type first please!')
             return;
         }
-        setIsSubmitting(true);
-        Plan.sendApi('add', { params: {}, data: { type_id: planTypeId }, }).then(res => {
-            const { code } = res;
-            setIsSubmitting(false);
-            if (code === 2000) {
-                message.success('You have created a plan, thx~');
-                setPlanTypeId(0);
+        Modal.confirm({
+            title: 'Confirm',
+            icon: <SmilingFace theme="outline" size="20" fill="#fe7708" strokeLinecap="butt"/>,
+            content: 'Confirm to create a new plan?',
+            okText: 'yes',
+            cancelText: 'cancel',
+            onOk: () => {
+                setIsSubmitting(true);
+                Plan.sendApi('add', { params: {}, data: { type_id: planTypeId }, }).then(res => {
+                    const { code } = res;
+                    setIsSubmitting(false);
+                    if (code === 2000) {
+                        message.success('You have created a plan, thx~');
+                        setPlanTypeId(0);
+                    }
+                });
             }
-        })
+        });
     }
     return (
         <div className={`view choose ${isMobile ? 'choose--mobile' : ''}`}>
